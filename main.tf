@@ -30,11 +30,11 @@ resource "aws_key_pair" "kp" {
 }
 
 resource "local_file" "ssh_key" {
-  filename = "${aws_key_pair.kp.key_name}.pem"
+  filename = ".artefacts/${aws_key_pair.kp.key_name}.pem"
   content = tls_private_key.pk.private_key_pem
 
   provisioner "local-exec" {
-    command = "chmod 0700 ${aws_key_pair.kp.key_name}.pem"
+    command = "chmod 0700 .artefacts/${aws_key_pair.kp.key_name}.pem"
   }
 }
 
