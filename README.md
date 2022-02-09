@@ -23,4 +23,10 @@ Start...
 terraform apply
 ```
 
-Wait for instance provisioning be done.
+Wait for instance provisioning be done. You will see master & worker IPs.
+
+To login master node:
+
+```bash
+ssh -i .artefacts/myKey.pem ubuntu@***.***.***.***
+```
