@@ -6,7 +6,18 @@ export TF_VAR_lfd259_password=********
 export TF_VAR_lfd259_username=********
 ```
 
-Run...
+Make sure you have configured AWS profile. Check `~/.aws/credentials` file and select proper profile by setting env variable:
+
+```bash
+export AWS_PROFILE=******
+```
+
+For the first time, initialize terraform and S3 backend:
+```bash
+terraform apply
+```
+
+Start...
 
 ```bash
 terraform apply
