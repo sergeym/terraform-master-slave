@@ -54,21 +54,10 @@ resource "aws_security_group" "main" {
   ]
   ingress = [
     {
-      description       = "SSH Port"
-      from_port         = 22
-      to_port           = 22
-      protocol          = "tcp"
-      self              = false
-      cidr_blocks       = ["0.0.0.0/0"]
-      ipv6_cidr_blocks  = []
-      prefix_list_ids   = []
-      security_groups   = []
-    },
-    {
-      description       = "K8S API"
-      from_port         = 6443
-      to_port           = 6443
-      protocol          = "tcp"
+      description       = ""
+      from_port         = 0
+      to_port           = 0
+      protocol          = "-1"
       self              = false
       cidr_blocks       = ["0.0.0.0/0"]
       ipv6_cidr_blocks  = []
